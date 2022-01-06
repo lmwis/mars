@@ -23,6 +23,7 @@ func NewCertCache(q *common.Queue) *CertCache {
 }
 
 // Get 获取证书
+// to review
 func (c *CertCache) Get(host string) *tls.Certificate {
 	value, ok := c.m.Load(host)
 	if !ok {
